@@ -1,31 +1,43 @@
 @font-face {
-    font-family: 'AmazonEmberLight';
-    src: url('https://assets.opendata.aws/fonts/amazon-ember/AmazonEmber_W_Lt.woff2') format('woff2'), url('https://assets.opendata.aws/fonts/amazon-ember/AmazonEmber_W_Lt.woff') format('woff');
+  font-family: "AmazonEmberLight";
+  src: url("https://assets.opendata.aws/fonts/amazon-ember/AmazonEmber_W_Lt.woff2")
+      format("woff2"),
+    url("https://assets.opendata.aws/fonts/amazon-ember/AmazonEmber_W_Lt.woff")
+      format("woff");
 }
 
 @font-face {
-    font-family: 'AmazonEmber';
-    src: url('https://assets.opendata.aws/fonts/amazon-ember/AmazonEmber_W_Rg.woff2') format('woff2'), url('https://assets.opendata.aws/fonts/amazon-ember/AmazonEmber_W_Rg.woff') format('woff');
+  font-family: "AmazonEmber";
+  src: url("https://assets.opendata.aws/fonts/amazon-ember/AmazonEmber_W_Rg.woff2")
+      format("woff2"),
+    url("https://assets.opendata.aws/fonts/amazon-ember/AmazonEmber_W_Rg.woff")
+      format("woff");
 }
 
 @font-face {
-    font-family: 'AmazonEmberBold';
-    src: url('https://assets.opendata.aws/fonts/amazon-ember/AmazonEmber_W_Bd.woff2') format('woff2'), url('https://assets.opendata.aws/fonts/amazon-ember/AmazonEmber_W_Bd.woff') format('woff');
+  font-family: "AmazonEmberBold";
+  src: url("https://assets.opendata.aws/fonts/amazon-ember/AmazonEmber_W_Bd.woff2")
+      format("woff2"),
+    url("https://assets.opendata.aws/fonts/amazon-ember/AmazonEmber_W_Bd.woff")
+      format("woff");
 }
 
-a { color:#007dbc; }
+a {
+  color: #007dbc;
+}
 
 a:hover {
   text-decoration: underline;
   color: #eb5f07;
 }
 
-body { padding: 70px 0 30px 0;
+body {
+  padding: 70px 0 30px 0;
   font-family: AmazonEmber, Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
 .tag {
-  margin-right: .8em;
+  margin-right: 0.8em;
 }
 
 .link-tag {
@@ -34,33 +46,39 @@ body { padding: 70px 0 30px 0;
 }
 
 .service-tag {
-  background-color: #232F3E !important;
+  background-color: #232f3e !important;
   border-width: 1px;
   border-style: solid;
 }
 
 .navbar-default {
-  background-color: #232F3E;
+  background-color: #232f3e;
 }
 
-.roda-header h1, .roda-header h2 {
+.roda-header h1,
+.roda-header h2 {
   font-size: 24px;
-  color: #FFF;
-  float:left;
+  color: #fff;
+  float: left;
   margin: 20px 0 10px 0;
 }
 
 .roda-header h2 a {
-  color:#FFF;
+  color: #fff;
 }
 
-h1, h2, h3, h4, .dataset h3 a {
-  font-family: AmazonEmberBold, Helvetica Neue Bold, Helvetica Neue, Helvetica, Arial, sans-serif;
-  color:#232F3E;
+h1,
+h2,
+h3,
+h4,
+.dataset h3 a {
+  font-family: AmazonEmberBold, Helvetica Neue Bold, Helvetica Neue, Helvetica,
+    Arial, sans-serif;
+  color: #232f3e;
 }
 
 .dataset h3 a:hover {
-  color:#eb5f07;
+  color: #eb5f07;
 }
 
 .datasets h2 {
@@ -76,7 +94,7 @@ h1, h2, h3, h4, .dataset h3 a {
 }
 
 #dataatwork h4 a {
-  color: #232F3E;
+  color: #232f3e;
 }
 
 .dataatwork-category {
@@ -88,7 +106,8 @@ h1, h2, h3, h4, .dataset h3 a {
 }
 
 .lede {
-  font-family: AmazonEmberLight, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: AmazonEmberLight, Helvetica Neue Light, Helvetica Neue, Helvetica,
+    Arial, sans-serif;
   font-size: 1.28em;
   font-weight: 200;
   line-height: 1.6em;
@@ -96,8 +115,8 @@ h1, h2, h3, h4, .dataset h3 a {
 
 #aws_header_logo {
   max-width: 59px;
-  float:right;
-  padding:16px 0 16px 0 ;
+  float: right;
+  padding: 16px 0 16px 0;
 }
 
 .label {
@@ -135,7 +154,7 @@ ul.resource-list li {
 }
 
 ul.resource-list li:last-child {
-  border-bottom:none;
+  border-bottom: none;
 }
 
 ul.dataatwork-list li {
@@ -143,14 +162,14 @@ ul.dataatwork-list li {
 }
 
 dt {
-  margin-top: .6em;
+  margin-top: 0.6em;
 }
 
 a.aws-link::before {
   content: "AWS";
   display: inline;
-  padding: .1em .4em .2em;
-  margin-right: .3em;
+  padding: 0.1em 0.4em 0.2em;
+  margin-right: 0.3em;
   font-size: 75%;
   font-weight: 400;
   line-height: 1;
@@ -158,39 +177,40 @@ a.aws-link::before {
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
-  border-radius: .25em;
+  border-radius: 0.25em;
   background-color: #eb5f07;
 }
 
 .section-row {
-  border-color: #232F3E;
+  border-color: #232f3e;
 }
 
-@media (max-width:768px) {
-  .roda-header h1, .roda-header h2 {
+@media (max-width: 768px) {
+  .roda-header h1,
+  .roda-header h2 {
     font-size: 18px;
-    color: #FFF;
-    float:left;
+    color: #fff;
+    float: left;
     margin: 20px 0 20px 0;
   }
   #aws_header_logo {
     max-width: 40px;
-    float:right;
-    padding:16px 0 16px 0 ;
+    float: right;
+    padding: 16px 0 16px 0;
   }
 }
 
-@media (min-height: 790px) and (min-width:992px) {
- .aboutbox {
-    position:fixed;
+@media (min-height: 790px) and (min-width: 992px) {
+  .aboutbox {
+    position: fixed;
     z-index: 2;
     max-width: 392px;
   }
 }
 
-@media (min-height: 790px) and (min-width:1200px) {
- .aboutbox {
-    position:fixed;
+@media (min-height: 790px) and (min-width: 1200px) {
+  .aboutbox {
+    position: fixed;
     z-index: 2;
     max-width: 490px;
   }
@@ -222,4 +242,16 @@ img.providers {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.nav-tab-active {
+  color: #f00;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
 }

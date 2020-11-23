@@ -391,7 +391,7 @@ function jsonMerge (cb) {
   let top = {};
   repos.forEach(function (repo) {
     // Pretty dir name for finding datasets
-    var datasets = requireDir(`./tmp/data/unmerged/${repo}`);
+    var datasets = requireDir(`./tmp/data/unmerged/${repo}/datasets`);
     for (var k in datasets) {
       var dataset = datasets[k];
       const slug = generateSlug(k);

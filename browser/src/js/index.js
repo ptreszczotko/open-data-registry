@@ -150,3 +150,4 @@ if (search) {
 
 // Load page with search box in focus
 $("#search-box").focus();
+
