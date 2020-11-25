@@ -8,8 +8,6 @@ rm -rf browser/tmp/
 mkdir -p browser/data-sources/awslabs-open-data-registry
 cp -R datasets browser/data-sources/awslabs-open-data-registry/
 
-
-
 cd browser && npm run build && cd ..
 
 #aws s3 ls s3://aws-new-pault/

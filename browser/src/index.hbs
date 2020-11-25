@@ -7,7 +7,12 @@
   <div class="row">
     {{#each datasets}}
     <div id="{{Slug}}" class="dataset">
-      <h3><a href="/{{Slug}}/">{{Name}}</a> 405Kb</h3>
+
+      <h3><a href="/{{Slug}}/">{{Name}}</a></h3>
+
+      <code data-toggle="tooltip" data-placement="top"
+        title='<b>Usability Score</b><br/><li>Easy to understand and includes essential metadata</li><li>Complete documentation including Jupyter Notebooks</li>'>Usability Score: 7.4</code>
+
       <p>{{#each Tags}}{{#isEqual . 'aws-pds'}}{{else}}<span
           class="label label-info{{#isEqual . 'sustainability'}}-sustainability{{else}}{{/isEqual}} tag link-tag">{{.}}</span>{{/isEqual}}{{/each}}
       </p>

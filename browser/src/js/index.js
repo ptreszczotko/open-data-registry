@@ -151,3 +151,7 @@ if (search) {
 // Load page with search box in focus
 $("#search-box").focus();
 
+//tooltip
+$(document).ready(function() {
+  $("body").tooltip({ selector: '[data-toggle=tooltip]' , html: true});
+});

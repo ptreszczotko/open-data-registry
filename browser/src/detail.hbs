@@ -33,29 +33,61 @@
     <hr />
 
     {{#if DataAtWork}}
-    <h4 name="usageexamples">Usage Examples</h4>
+    <h4 id="tab-{{@index}}" name="usageexamples">Usage Examples</h4>
     <h5 class="nav-tab-wrapper">
       {{#each DataAtWork}}
-      <a href="#tab-{{@index}}" class="nav-pills nav-tab{{#if @first }} nav-tab-active{{/if}}">{{@key}}</a> <span
+      <a href="#tab-{{@index}}" class="nav-tab{{#if @first }} nav-tab-active{{/if}}">{{@key}}</a> <span
         class="badge">{{#if this}}{{this.length}}{{else}}0{{/if}}</span> | {{/each}}
     </h5>
 
-    {{#each DataAtWork}}
-    <section id="tab-{{@index}}" class="tab-content{{#if @first }} active{{/if}}">
 
-      {{#if this}}
+    {{#each DataAtWork}}
+    {{#if @this}}
+    <section style="padding-top: 130px; margin-top: -130px;" id="tab-{{@index}}"
+      class="tab-content{{#if @first }} active{{/if}}">
+      {{#isEqual @key 'Notebooks'}}
+      <ul class="dataatwork-list">
+        {{#each @this}}
+        {{> detailListNotebooks URL=URL Title=Title AuthorURL=AuthorURL AuthorName=AuthorName Services=Services}}
+        {{/each}}
+      </ul>
+      {{else}}
       <ul class="dataatwork-list">
         {{#each @this}}
         {{> detailList URL=URL Title=Title AuthorURL=AuthorURL AuthorName=AuthorName Services=Services}}
         {{/each}}
       </ul>
-      {{else}}
-      Consider adding some documentation under the <i>{{@key}}</i> section.
-      {{/if}}
-
+      {{/isEqual}}
     </section>
-    {{/each}}
+    {{else}}
+    <section style="padding-top: 130px; margin-top: -130px;" id="tab-{{@index}}"
+      class="tab-content{{#if @first }} active{{/if}}">
+      Consider adding some documentation under the <i>{{@key}}</i> section.
+    </section>
     {{/if}}
+    {{/each}}
+
+    {{/if}}
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document" style="width:80% !important; max-width:95% !important;">
+        <div class="modal-content">
+          <div class="modal-header" data-dismiss="modal">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <h1><span aria-hidden="true">&times;</span></h1>
+            </button>
+            <h2 class="modal-title" id="exampleModalLabel">...</h2>
+          </div>
+          <div class="modal-body">
+            Couldn't load the file...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     {{#if Metadata}}
     <h4>More Information</h4>
