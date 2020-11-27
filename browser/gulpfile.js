@@ -380,13 +380,10 @@ function jsonMerge (cb) {
     fs.mkdirSync('./tmp/data/datasets/');
   }
 
-  
   let repos = fs.readdirSync(dataSourcesDirectory).filter(function(file) {
     return fs.statSync(path.join(dataSourcesDirectory, file)).isDirectory();
   });
 
-  console.log('repos:',repos);
-  
   // Loop over datasets and conflate Metadata
   let top = {};
   repos.forEach(function (repo) {
